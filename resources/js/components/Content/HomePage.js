@@ -8,8 +8,7 @@ import {
     Carousel,
     Row,
     Col,
-    BackTop,
-    Divider
+    BackTop
 } from "antd";
 import { Link } from "react-router-dom";
 
@@ -37,6 +36,10 @@ class HomePage extends Component {
         return (
             <Layout>
                 <Row>
+                    {/* <Col span={4}>
+                        <p>{window.token}</p>
+                    </Col> */}
+
                     <Col span={24}>
                         <Carousel
                             effect="fade"

@@ -25,9 +25,19 @@ Route::group([
         Route::get('user', 'AuthController@user');
     });
 });
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+
+Route::group([    
+       
+    'middleware' => 'api',    
+    'prefix' => 'password'
+], function () {    
+    Route::post('create', 'PasswordResetController@create');
+    Route::get('find/{token}', 'PasswordResetController@find');
+    Route::post('reset', 'PasswordResetController@reset');
+});
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 // Route::post('/register','Api\AuthController@register');
 // Route::post('/login','Api\AuthController@login');
