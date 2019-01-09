@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.mainlayout')
 
 @section('content')
 <div class="container">
@@ -16,11 +16,11 @@
 
                     You are logged in!
 
-                    <div id="app">
+                    {{--  <div id="app">
                         <passport-clients></passport-clients>
                         <passport-authorized-clients></passport-authorized-clients>
                         <passport-personal-access-tokens></passport-personal-access-tokens>
-                    </div>
+                    </div>  --}}
                 </div>
             </div>
         </div>
